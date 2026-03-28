@@ -11,12 +11,33 @@
 </head>
 <body>
   <main class="app-shell">
-    <section id="menu" class="panel">
-      <p class="eyebrow">2D Platformer Prototype</p>
+    <section id="intro-panel" class="panel intro-panel">
+      <div class="intro-header">
+        <p class="eyebrow">Cinematic Opening</p>
+        <h1>Wizard Boy And The Extremely Bad Evening</h1>
+        <p id="intro-subtitle" class="intro-copy">
+          Wizard Boy is about to learn that demons are rude, destiny is dramatic, and parallel
+          dimensions have no chill.
+        </p>
+      </div>
+
+      <canvas id="intro-canvas" width="960" height="540" aria-label="Intro cinematic"></canvas>
+
+      <div class="intro-footer">
+        <p id="intro-caption" class="intro-caption">
+          In the gentle village of Sparklebrook, Wizard Boy, Derek, and Destralea had absolutely
+          no idea this night was about to get ridiculous.
+        </p>
+        <p id="skip-hint" class="skip-hint">Press `Esc` twice to skip the tragedy.</p>
+      </div>
+    </section>
+
+    <section id="menu" class="panel hidden">
+      <p class="eyebrow">The Legend Of Stick Wizard</p>
       <h1>Wizard Stick Quest</h1>
       <p class="intro">
-        Pick the kind of wizard you want to be, then hop into the level with your starting weapon:
-        a trusty stick.
+        The one and only Stick Wizard was once Wizard Boy. Choose the color path of his younger self,
+        then step into the broken dimensions with your trusty stick and growing spellbook.
       </p>
 
       <div class="picker-block">
@@ -35,7 +56,59 @@
           <p class="selected-label">Selected Wizard</p>
           <p id="selected-name" class="selected-name">Red Wizard</p>
           <p class="selected-weapon">Starting weapon: Stick</p>
+          <p id="selected-leaning" class="selected-leaning">Black-leaning path</p>
+          <p id="selected-elements" class="selected-elements">Fire and Earth</p>
         </div>
+      </div>
+
+      <div class="lore-grid">
+        <article class="lore-card">
+          <p class="selected-label">Origin Story</p>
+          <h3>Wizard Boy To Stick Wizard</h3>
+          <p>
+            As a child, the future legend was known as Wizard Boy. During his childhood, a demon
+            possessed his best friend Derek and turned him into the hand that struck down
+            Destralea, Wizard Boy's girlfriend.
+          </p>
+          <p>
+            Wizard Boy rushed in to save her, but Derek's blow hurled him into a parallel
+            dimension. He grows into Stick Wizard by crossing dungeon after dungeon, gathering
+            spells, and helping versions of himself in each elemental dimension until he can find
+            the way home.
+          </p>
+        </article>
+
+        <article class="lore-card">
+          <p class="selected-label">Elemental Path</p>
+          <h3 id="selected-dimension">Ashen Rift</h3>
+          <p id="selected-dimension-text">
+            Black-leaning wizards channel Fire and Earth as they fight through harsher, heavier
+            worlds.
+          </p>
+          <p>
+            White-leaning wizards master Air and Water. Black-leaning wizards master Fire and
+            Earth. Each element opens a different dimension to survive.
+          </p>
+        </article>
+
+        <article class="lore-card">
+          <p class="selected-label">First Three Worlds</p>
+          <h3>Dimensional Threats</h3>
+          <div class="world-list">
+            <div class="world-item">
+              <strong>World I: Stone Hollow</strong>
+              <span>Gollums and Elementals</span>
+            </div>
+            <div class="world-item">
+              <strong>World II: Broken Sky</strong>
+              <span>Dragons and Gargoyls</span>
+            </div>
+            <div class="world-item">
+              <strong>World III: Shadow Rift</strong>
+              <span>Demons, Spirits, and Dark Wizards</span>
+            </div>
+          </div>
+        </article>
       </div>
 
       <button id="start-button" class="start-button" type="button">Start Adventure</button>
@@ -64,7 +137,7 @@
         </div>
         <div>
           <p class="hud-label">Goal</p>
-          <p class="hud-value">Clear the forest path</p>
+          <p class="hud-value">Find your home dimension</p>
         </div>
       </header>
 
