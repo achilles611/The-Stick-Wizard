@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wizard Stick Quest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="menu" class="panel">
+      <p class="eyebrow">2D Platformer Prototype</p>
+      <h1>Wizard Stick Quest</h1>
+      <p class="intro">
+        Pick the kind of wizard you want to be, then hop into the level with your starting weapon:
+        a trusty stick.
+      </p>
+
+      <div class="picker-block">
+        <h2>Choose Your Wizard Color</h2>
+        <div id="wizard-options" class="wizard-options" aria-label="Wizard color choices"></div>
+      </div>
+
+      <div class="selected-card">
+        <div class="wizard-preview">
+          <div id="preview-hat" class="preview-hat"></div>
+          <div id="preview-face" class="preview-face"></div>
+          <div id="preview-robe" class="preview-robe"></div>
+          <div class="preview-stick"></div>
+        </div>
+        <div>
+          <p class="selected-label">Selected Wizard</p>
+          <p id="selected-name" class="selected-name">Red Wizard</p>
+          <p class="selected-weapon">Starting weapon: Stick</p>
+        </div>
+      </div>
+
+      <button id="start-button" class="start-button" type="button">Start Adventure</button>
+
+      <ul class="controls">
+        <li><span>Move</span> `A/D` or arrow keys</li>
+        <li><span>Jump</span> `W`, `Up`, or `Space`</li>
+        <li><span>Attack</span> `F`, `J`, or `Enter`</li>
+        <li><span>Fireball</span> `K` or `X` for 1 MP</li>
+      </ul>
+    </section>
+
+    <section id="game-panel" class="panel game-panel hidden">
+      <header class="hud">
+        <div>
+          <p class="hud-label">Wizard</p>
+          <p id="hud-wizard" class="hud-value">Red Wizard</p>
+        </div>
+        <div>
+          <p class="hud-label">Weapon</p>
+          <p class="hud-value">Stick</p>
+        </div>
+        <div>
+          <p class="hud-label">Spell</p>
+          <p class="hud-value">Fireball (1 MP)</p>
+        </div>
+        <div>
+          <p class="hud-label">Goal</p>
+          <p class="hud-value">Clear the forest path</p>
+        </div>
+      </header>
+
+      <canvas id="game" width="960" height="540" aria-label="Wizard platformer game"></canvas>
+
+      <div class="footer-bar">
+        <p id="status-text">Walk, jump, and knock the forest critters away with your stick.</p>
+        <button id="restart-button" class="restart-button" type="button">Back To Wizard Select</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
